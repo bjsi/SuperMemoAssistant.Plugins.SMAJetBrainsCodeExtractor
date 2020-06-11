@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>org.example.SMACodeExtractor</id>
+    <name>SMACodeExtractor</name>
+    <version>2020.1.1</version>
+    <vendor email="none" url="none">None</vendor>
+
+    <description><![CDATA[
+    Extract code snippets for export into SuperMemo via SuperMemoAssistant.
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="SMACodeExtractor.HelloAction"
+               text="SMACodeExtractor"
+               description="Hello World">
+            <add-to-group group-id="MainMenu" anchor="last"></add-to-group>
+            <action class="com.example.SMACodeExtractor.HelloAction"
+                    description="Extract the selected code into SM"
+                    id="SMACodeExtractor.Actions.HelloAction"
+                    text="Extract Selection">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt X"/>
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
